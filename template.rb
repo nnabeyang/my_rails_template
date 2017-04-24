@@ -26,7 +26,7 @@ RUBY
 end
 after_bundle do
   run "bin/spring stop"
-  get 'https://gist.githubusercontent.com/nnabeyang/435005a54c23865642fb93728a242950/raw/Guardfile', 'Guardfile'
+  get 'https://raw.githubusercontent.com/nnabeyang/my_rails_template/master/Gurdfile', 'Guardfile'
   generate "controller", "Welcome index"
   generate "model", "user name:string email:string"
   run "rails db:migrate"
