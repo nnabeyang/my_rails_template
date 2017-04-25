@@ -28,6 +28,7 @@ end
 after_bundle do
   run "bin/spring stop"
   get 'https://raw.githubusercontent.com/nnabeyang/my_rails_template/master/Gurdfile', 'Guardfile'
+  get 'https://raw.githubusercontent.com/nnabeyang/my_rails_template/master/ja.yml', 'config/locale/ja.yml'
   generate "controller", "Welcome index"
   generate "model", "user name:string email:string"
   run "rails db:migrate"
