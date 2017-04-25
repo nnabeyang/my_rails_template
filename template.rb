@@ -22,6 +22,7 @@ inject_into_file "config/application.rb", after: "# -- all .rb files in that dir
   config.generators do |g|
     g.assets false
   end
+  config.i18n.default_locale = :ja
 RUBY
 end
 after_bundle do
