@@ -10,7 +10,6 @@ RUBY
 end
 create_gemfile
 config_bundle
-route "root 'welcome#index'"
 inject_into_file "test/test_helper.rb", after: "require 'rails/test_help'" do<<'RUBY'
 
 require 'minitest/reporters'
@@ -27,9 +26,7 @@ RUBY
 end
 after_bundle do
   run "bin/spring stop"
-  get 'https://raw.githubusercontent.com/nnabeyang/my_rails_template/master/Gurdfile', 'Guardfile'
-  get 'https://raw.githubusercontent.com/nnabeyang/my_rails_template/master/ja.yml', 'config/locale/ja.yml'
-  generate "controller", "Welcome index"
+  generate "starter", "static_pages", "-f"
   generate "users", "users"
   run "rails db:migrate"
   git :init

@@ -5,6 +5,7 @@ def create_gemfile
   gem 'rails',        '5.0.0.1'
   gem 'bcrypt', '3.1.11'
   gem 'users', github: 'nnabeyang/users-rails'
+  gem 'starter-rails', github: 'nnabeyang/starter-rails'
   gem 'rails-i18n', '5.0.0'
   gem 'bootstrap-sass', '3.3.6'
   gem 'puma',         '3.4.0'
