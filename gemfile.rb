@@ -4,6 +4,7 @@ def create_gemfile
   add_source 'https://rubygems.org'
   gem 'rails',        '5.0.0.1'
   gem 'bcrypt', '3.1.11'
+  gem 'users', github: 'nnabeyang/users-rails'
   gem 'rails-i18n', '5.0.0'
   gem 'bootstrap-sass', '3.3.6'
   gem 'puma',         '3.4.0'
